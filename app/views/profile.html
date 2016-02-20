@@ -3,19 +3,58 @@
 		<!-- header contents -->
 	</div>
 	<div class="col-md-12">
-		<div class="col-md-3">
-			<div class="row">
-				<div class="col-md-8" >
-					<img src="images/guy-5.jpg" class="col-md-offset-3" style="border-radius:25px"/>
+		<div class="col-md-2" >
+			<div class="row" style="border:1px solid #DEDEDE">
+				<div class="col-md-12 white-background" >
+					<img src="images/guy-5.jpg" class="col-md-10 col-md-offset-1" style="border-radius:25px"/>
+					<div class="col-md-12 white-background align-text" ng-bind="user.name"></div>
+					<div class="col-md-12">
+						<button class="btn btn-success col-md-offset-3" > Following </button>
+					</div>
+				</div>	
+			<!-- </div>
+			<div class="row margin-top-30"> -->
+				<div class="col-md-12  white-background align-text margin-top-30">
+					<p>Hi! I'm Adrian the Senior UI Designer at MOSAICPRO. We hope you enjoy the design and quality of Social.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem delectus dolorum necessitatibus neque odio quam quas qui quod soluta? Aliquid eius esse minima.</p>
 				</div>
-				<div class="col-md-8 col-md-offset-3" ng-bind="user.name"></div>
-				<div class="col-md-8">
-					<button class="btn btn-success col-md-offset-3" > Following </button>
+			</div>
+			<div class="row margin-top-30">
+				<div class="col-md-12 white-background align-text" style="border:1px solid #DEDEDE" ng-repeat="contacts in contactDetails" ng-bind="contacts.name">
 				</div>
 			</div>
 		</div>
-		<div class="col-md-9">
-			sdklas
+	<div class="col-md-9" style="margin-left:1%">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-1">Send</div>
+				<input type="text" class="col-md-11" placeholder="search"/>
+			</div>
 		</div>
+		<div class="row margin-top-30">
+			<div class="col-md-12 white-background" >
+				<div class="col-md-1">Photos</div>
+				<div class="col-md-1">Albums</div>
+				<div class="col-md-offset-10">&nbsp;</div>
+				<img src="images/guy-5.jpg" ng-repeat="contact in contactDetails" class="col-md-1" style="border-radius:25px"/>
+			</div>
+		</div>
+		<div class="row margin-top-30">
+			<div class="col-md-12">
+				<div class="col-md-5  white-background">
+					<div class="col-md-12" style="border-bottom:1px solid grey">About</div>
+					<div class="col-md-12" ng-repeat="keys in profileHeaders">
+						<div class="col-md-5" ng-bind="keys"></div>
+						<div class="col-md-5 col-md-offset-1" ng-bind="profileDetails[keys]"></div>
+					</div>
+				</div>
+				<div class="col-md-6  col-md-offset-1 white-background">
+					<div class="col-md-12" style="border-bottom:1px solid grey">Friends</div>
+					<div class="col-md-12" ng-repeat="keys in profileHeaders">
+						<div class="col-md-5" ng-bind="keys"></div>
+						<div class="col-md-5 col-md-offset-1" ng-bind="profileDetails[keys]"></div>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
